@@ -1,0 +1,11 @@
+--- a/os_dep/linux/ioctl_cfg80211.c
++++ b/os_dep/linux/ioctl_cfg80211.c
+@@ -10234,7 +10234,7 @@ static struct cfg80211_ops rtw_cfg80211_
+ 	#endif
+ #endif
+ 
+-#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3, 6, 0))
++#if (LINUX_VERSION_CODE >= KERNEL_VERSION(3, 6, 0) && LINUX_VERSION_CODE < KERNEL_VERSION(6, 12, 0))
+ 	.set_monitor_channel = cfg80211_rtw_set_monitor_channel,
+ #endif
+ 
